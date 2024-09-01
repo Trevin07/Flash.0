@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Flash</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #001f3f; /* Dark blue background */
+            color: #fff; /* White text */
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        img.logo {
+            width: 150px;
+        }
+        h1, h2 {
+            margin: 20px 0;
+        }
+        textarea, button {
+            width: 80%;
+            padding: 10px;
+            margin: 10px auto;
+            border-radius: 10px; /* Rounded corners */
+            border: none;
+        }
+        button {
+            background: #ffdd57; /* Yellow button background */
+            color: #001f3f; /* Dark blue text */
+            cursor: pointer;
+            font-size: 1em; /* Slightly larger font size */
+        }
+        .large-button {
+            width: 80%; /* Full width */
+            padding: 12px; /* Larger padding */
+            font-size: 1.1em; /* Larger font size */
+        }
+        .small-button {
+            width: 150px; /* Smaller width */
+            padding: 8px; /* Smaller padding */
+            font-size: 0.875em; /* Slightly smaller font size */
+        }
+        .nav-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0; /* Space between navigation links and other content */
+        }
+        .nav-links a {
+            display: inline-block;
+            width: 150px; /* Smaller width */
+            padding: 8px; /* Smaller padding */
+            margin: 5px;
+            color: #001f3f; /* Dark blue text */
+            background: #ffdd57; /* Yellow background */
+            border: none;
+            border-radius: 8px; /* Slightly smaller rounded corners */
+            text-decoration: none; /* Remove underline */
+            font-size: 0.875em; /* Slightly smaller font size */
+            text-align: center; /* Center the text */
+        }
+        .faq {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .faq .question {
+            width: 200px;
+            padding: 10px;
+            margin: 5px;
+            color: #ffdd57; /* Yellow question color */
+            background: #001f3f; /* Dark blue background for questions */
+            border: 1px solid #ffdd57; /* Yellow border */
+            cursor: pointer;
+            border-radius: 10px; /* Rounded corners */
+            text-decoration: none; /* Remove underline */
+        }
+        .faq .answer {
+            display: none;
+            padding: 10px;
+            border-left: 2px solid #ffdd57; /* Yellow border on the left */
+            background: #001f3f; /* Dark blue background for answers */
+            max-width: 200px;
+            color: #fff; /* White text for answers */
+            border-radius: 10px; /* Rounded corners */
+            text-align: left; /* Left-align text inside answers */
+        }
+    </style>
+</head>
+<body>
+    <img src="pngwing.com.png" alt="Flash Logo" class="logo">
+    <h1>Flash.0</h1>
+    <h1>Support Page</h1>
+    <p>If you need help, you've come to the right place. Contact us for support.</p>
+    <p>Contact Number: (011)-2714123</p>
+    <h2>Send Us a Message</h2>
+    <form action="send_message.php" method="POST">
+        <textarea name="message" placeholder="Enter your message here" required></textarea>
+        <button type="submit" class="large-button">Send Message</button>
+    </form>
+    <button onclick="window.location.href='home.html'" class="large-button">Go to Home Page</button>
+    <div class="nav-links">
+        <a href="login.html" class="small-button">Login</a>
+        <a href="functionalities.html" class="small-button">Functionalities</a>
+    </div>
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+        <div class="question" onclick="toggleAnswer('answer1')">What is Flash.0?</div>
+        <div id="answer1" class="answer">Flash.0 is a parcel delivery company based in Colombo 07, Sri Lanka.</div>
+        <div class="question" onclick="toggleAnswer('answer2')">How can I contact customer support?</div>
+        <div id="answer2" class="answer">Call (011)-2714123 or use our support page.</div>
+        <div class="question" onclick="toggleAnswer('answer3')">Where can I find more info?</div>
+        <div id="answer3" class="answer">Check the Functionalities page on our website.</div>
+        <div class="question" onclick="toggleAnswer('answer4')">What are your business hours?</div>
+        <div id="answer4" class="answer">Monday to Friday, 9 AM to 6 PM.</div>
+        <div class="question" onclick="toggleAnswer('answer5')">Do you offer international shipping?</div>
+        <div id="answer5" class="answer">Currently, only domestic shipping within Sri Lanka.</div>
+    </div>
+    <p>© 2024 Flash.0</p>
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            answer.style.display = answer.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</body>
+</html>

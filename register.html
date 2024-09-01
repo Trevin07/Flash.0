@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Flash</title>
+    <link rel="stylesheet" href="styles1.css">
+    <script src="scripts1.js" defer></script>
+    <style>
+        /* Reduce the button width and stack them vertically */
+        .nav-buttons {
+            display: flex;
+            flex-direction: column; /* Stack buttons vertically */
+            align-items: center; /* Center-align the buttons */
+        }
+
+        .nav-buttons button {
+            width: 300px; /* Set desired width for the larger buttons */
+            padding: 12px 0; /* Adjust padding for larger buttons */
+            margin-bottom: 10px; /* Add space between the buttons */
+            font-size: 1em; /* Adjust font size */
+            text-align: center; /* Center the text */
+        }
+
+        form button {
+            width: 150px; /* Keep the Register button width smaller */
+            padding: 10px 0;
+            font-size: 0.875em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Adding an image at the top -->
+    <img src="pngwing.com.png" alt="Flash Logo" class="logo">
+
+    <h1>Flash.0</h1>
+    <p></p>
+    <h1>Register</h1>
+    
+    <form action="register.php" method="POST">
+        <input type="text" name="username" placeholder="Username" required>
+        <p></p>
+        <input type="password" name="password" placeholder="Password" required>
+        <p></p>
+        <button type="submit">Register</button>
+    </form>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+        <button onclick="window.location.href='home.html'">Home</button>
+        <button onclick="window.location.href='login.html'">Login</button>
+        <button onclick="window.location.href='functionalities.html'">Functionalities</button>
+        <button onclick="window.location.href='support.html'">Support</button>
+    </div>
+    <br><br>
+ 
+<p> © 2024 Flash.0</p>
+</body>
+</html>

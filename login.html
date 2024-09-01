@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Flash</title>
+    <link rel="stylesheet" href="styles1.css">
+    <script src="scripts1.js" defer></script>
+    <style>
+        /* Style for reducing button size and stacking them vertically */
+        .nav-buttons {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+        }
+
+        /* Reduce the width of the login button */
+        form button {
+            width: 200px; 
+            padding: 10px 0; 
+            font-size: 0.875em; 
+            text-align: center; 
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        // Function to show an alert if there's an error
+        function showError() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('error') === '1') {
+                alert('Invalid username or password');
+            }
+        }
+
+        // Run the function when the page loads
+        window.onload = showError;
+    </script>
+</head>
+<body>
+    <!-- Adding an image at the top -->
+    <img src="pngwing.com.png" alt="Flash Logo" class="logo">
+    
+    <h1>Flash.0</h1>
+    
+    <h1>Login</h1>
+
+    <form action="login.php" method="POST">
+        <input type="text" name="username" placeholder="Username" required>
+        <p></p>
+        <input type="password" name="password" placeholder="Password" required>
+        <p></p>
+        <button type="submit">Login</button>
+    </form>
+
+    <p>Not a member? <a href="register.html" style="color: yellow; text-decoration: underline;">Register here</a>.</p>
+    
+    <!-- Navigation buttons -->
+    <div class="nav-buttons">
+        <button onclick="window.location.href='home.html'">Home</button>
+        <button onclick="window.location.href='functionalities.html'">Functionalities</button>
+        <button onclick="window.location.href='support.html'">Support</button>
+    </div>
+    <br><br>
+ 
+<p> © 2024 Flash.0</p>
+</body>
+</html>
